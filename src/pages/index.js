@@ -4,18 +4,60 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
+import ConfettiGenerator from "confetti-js"
 
 // import "../utils/global.scss"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
+import { relative } from "path"
 //TODO: switch to staticQuery, get rid of comments, remove unnecessary components, export as draft template
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   let postCounter = 0
 
+  var isBirthday = new Date().getMonth() == 9 && new Date().getDate() == 15
+
+  React.useEffect(() => {
+    const confettiSettings = {
+      target: "my-canvas",
+      size: 2,
+      max: 1600,
+      height: 3840,
+    }
+    let confetti
+    if (isBirthday) {
+      confetti = new ConfettiGenerator(confettiSettings)
+      confetti.render()
+    }
+
+    return () => {
+      if (isBirthday) confetti.clear()
+    }
+  }, [])
+
   return (
     <Layout title={siteTitle}>
+      {isBirthday && (
+        <div
+          style={{
+            position: "relative",
+            zIndex: 300,
+            display: "flex",
+            justifyContent: "center",
+            fontWeight: "bold",
+          }}
+          textColor="black"
+        >
+          <div style={{ margin: "10px" }}>
+            Doğum günün kutlu olsun. Nice mutlu yıllara...
+          </div>
+          <canvas
+            id="my-canvas"
+            style={{ position: "absolute", pointerEvents: "none" }}
+          ></canvas>
+        </div>
+      )}
       <SEO title="home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (

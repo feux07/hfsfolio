@@ -69,7 +69,7 @@ const Layout = props => {
           </div>
         </div>
       </header>
-      <main id="site-main" className="site-main">
+      <main id="site-main" className="site-main" style={{ marginTop: "10px" }}>
         <div id="swup" className="transition-fade">
           {children}
         </div>
