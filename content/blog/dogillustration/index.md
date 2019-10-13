@@ -16,6 +16,7 @@ description: puppy nursery print | nursery dog print | puppy painting | cute pup
 
 <div class="centered">
 <span style="margin-right:5px; font-weight:bold;">Buy DOG ILLUSTRATION from</span>
+
 [etsy](https://www.etsy.com/listing/660587714/dog-illustration-puppy-nursery-print?ref=shop_home_active_6)
 
 </div>
