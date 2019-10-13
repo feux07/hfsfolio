@@ -16,7 +16,7 @@ const BlogIndex = ({ data }, location) => {
   const posts = data.allMarkdownRemark.edges
   let postCounter = 0
 
-  var isBirthday = new Date().getMonth() == 9 && new Date().getDate() == 15
+  //var isBirthday = new Date().getMonth() == 9 && new Date().getDate() == 15
 
   React.useEffect(() => {
     const confettiSettings = {
@@ -27,9 +27,9 @@ const BlogIndex = ({ data }, location) => {
     }
 
     const confetti = new ConfettiGenerator(confettiSettings)
-    if (isBirthday) {
-      confetti.render()
-    }
+    // if (isBirthday) {
+    confetti.render()
+    //}
 
     return () => {
       confetti.clear()
@@ -48,11 +48,12 @@ const BlogIndex = ({ data }, location) => {
         }}
         textColor="black"
       >
-        {isBirthday && (
+        {
+          //isBirthday &&
           <div style={{ margin: "10px" }}>
             Doğum günün kutlu olsun. Nice mutlu yıllara...
           </div>
-        )}
+        }
         <canvas
           id="my-canvas"
           style={{ position: "absolute", pointerEvents: "none" }}
