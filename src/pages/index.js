@@ -22,9 +22,9 @@ const BlogIndex = ({ data }, location) => {
     const confettiSettings = {
       target: "my-canvas",
       size: 2,
-      max: 1600,
+      max: 800,
       height: 3840,
-      clock:50
+      clock: 50,
     }
 
     const confetti = new ConfettiGenerator(confettiSettings)
@@ -54,7 +54,7 @@ const BlogIndex = ({ data }, location) => {
           <div
             style={{
               margin: "20px",
-              fontSize: "22px",
+              fontSize: "21px",
             }}
           >
             Doğum günün kutlu olsun. Nice mutlu yıllara...

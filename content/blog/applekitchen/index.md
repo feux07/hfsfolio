@@ -15,8 +15,10 @@ description: printable fruit art | apple print | apple kitchen decor | watercolo
 
 
 <div class="centered">
+<span style="margin-right:5px; font-weight:bold;">Buy APPLE KITCHEN PRINT from</span>
 
-[Buy from etsy](https://www.etsy.com/listing/675446307/apple-kitchen-print-printable-fruit-art?ref=shop_home_active_1)
+[etsy](https://www.etsy.com/listing/675446307/apple-kitchen-print-printable-fruit-art?ref=shop_home_active_1)
 
 </div>
+
 
