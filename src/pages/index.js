@@ -24,6 +24,7 @@ const BlogIndex = ({ data }, location) => {
       size: 2,
       max: 1600,
       height: 3840,
+      clock:50
     }
 
     const confetti = new ConfettiGenerator(confettiSettings)
