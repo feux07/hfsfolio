@@ -50,13 +50,21 @@ const BlogIndex = ({ data }, location) => {
       >
         {
           //isBirthday &&
-          <div style={{ margin: "10px" }}>
+          <div
+            style={{
+              margin: "20px",
+              fontSize: "22px",
+            }}
+          >
             Doğum günün kutlu olsun. Nice mutlu yıllara...
           </div>
         }
         <canvas
           id="my-canvas"
-          style={{ position: "absolute", pointerEvents: "none" }}
+          style={{
+            position: "absolute",
+            pointerEvents: "none",
+          }}
         ></canvas>
       </div>
 
