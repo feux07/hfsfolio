@@ -25,39 +25,40 @@ const BlogIndex = ({ data }, location) => {
       max: 1600,
       height: 3840,
     }
-    let confetti
+
+    const confetti = new ConfettiGenerator(confettiSettings)
     if (isBirthday) {
-      confetti = new ConfettiGenerator(confettiSettings)
       confetti.render()
     }
 
     return () => {
-      if (isBirthday) confetti.clear()
+      confetti.clear()
     }
   }, [])
 
   return (
     <Layout title={siteTitle}>
-      {isBirthday && (
-        <div
-          style={{
-            position: "relative",
-            zIndex: 300,
-            display: "flex",
-            justifyContent: "center",
-            fontWeight: "bold",
-          }}
-          textColor="black"
-        >
+      <div
+        style={{
+          position: "relative",
+          zIndex: 300,
+          display: "flex",
+          justifyContent: "center",
+          fontWeight: "bold",
+        }}
+        textColor="black"
+      >
+        {isBirthday && (
           <div style={{ margin: "10px" }}>
             Doğum günün kutlu olsun. Nice mutlu yıllara...
           </div>
-          <canvas
-            id="my-canvas"
-            style={{ position: "absolute", pointerEvents: "none" }}
-          ></canvas>
-        </div>
-      )}
+        )}
+        <canvas
+          id="my-canvas"
+          style={{ position: "absolute", pointerEvents: "none" }}
+        ></canvas>
+      </div>
+
       <SEO title="home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
