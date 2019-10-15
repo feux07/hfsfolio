@@ -18,7 +18,7 @@ const BlogIndex = ({ data }, location) => {
 
   //var isBirthday = new Date().getMonth() == 9 && new Date().getDate() == 15
 
-  React.useEffect(() => {
+  /*React.useEffect(() => {
     const confettiSettings = {
       target: "my-canvas",
       size: 2,
@@ -36,10 +36,10 @@ const BlogIndex = ({ data }, location) => {
       confetti.clear()
     }
   }, [])
-
+*/
   return (
     <Layout title={siteTitle}>
-      <div
+      /*<div
         style={{
           position: "relative",
           zIndex: 300,
@@ -68,6 +68,7 @@ const BlogIndex = ({ data }, location) => {
           }}
         ></canvas>
       </div>
+      */
 
       <SEO title="home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {/* <Bio /> */}
