@@ -39,7 +39,7 @@ const BlogIndex = ({ data }, location) => {
 */
   return (
     <Layout title={siteTitle}>
-      /*<div
+      {/*<div
         style={{
           position: "relative",
           zIndex: 300,
@@ -68,7 +68,7 @@ const BlogIndex = ({ data }, location) => {
           }}
         ></canvas>
       </div>
-      */
+      */}
 
       <SEO title="home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       {/* <Bio /> */}
